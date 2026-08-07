@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CT_001</string>
+
+    <string-array name="security_questions">
+        <item>당신의 첫 번째 반려동물의 이름은?</item>
+        <item>초등학교 이름은 무엇인가요?</item>
+        <item>가장 좋아하는 영화는?</item>
+    </string-array>
+</resources>

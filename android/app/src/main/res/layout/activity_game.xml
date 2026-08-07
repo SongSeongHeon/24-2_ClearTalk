@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- 상단 앱 이름 -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear Talk"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <View
+        android:id="@+id/dividerTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/appTitle"
+        android:layout_marginTop="16dp"
+        android:background="#DDDDDD" />
+
+    <!-- 제한 시간 표시 -->
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="남은 시간: 30초"
+        android:textSize="18sp"
+        android:textColor="#FF0000"
+        android:layout_below="@id/appTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <!-- 문제 텍스트 -->
+    <TextView
+        android:id="@+id/targetText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="발음할 문장이 여기에 표시됩니다."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_below="@id/timerText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="80dp" />
+
+    <!-- 발음 버튼 -->
+    <Button
+        android:id="@+id/startSpeechButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="음성 입력 시작"
+        android:backgroundTint="#FD0000"
+        android:textColor="#FFFFFF"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_below="@id/targetText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <!-- 결과 텍스트 -->
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="결과: 정확도 0%"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:background="#F4F4F4"
+        android:padding="16dp"
+        android:layout_below="@id/startSpeechButton"
+        android:layout_marginTop="80dp" />
+
+    <!-- 점수 영역 -->
+    <LinearLayout
+        android:id="@+id/scoreSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_below="@id/resultText"
+        android:background="#F4F4F4"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:text="현재 점수: 0점"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/highScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최고 점수: 0점"
+            android:textSize="16sp"
+            android:textColor="#757575"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!-- 하단 네비게이션 -->
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:background="#F4F4F4"
+        android:layout_marginBottom="15dp">
+
+        <Button
+            android:id="@+id/learnButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="학습"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/reviewButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="복습"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/performanceButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="성취도"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:gravity="center" />
+    </LinearLayout>
+</RelativeLayout>

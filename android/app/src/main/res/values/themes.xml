@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme.CT_001 정의 -->
+    <style name="Theme.CT_001" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary 색상 -->
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorPrimaryDark">#3700B3</item>
+        <item name="colorAccent">#03DAC5</item>
+
+        <!-- 배경 색상 -->
+        <item name="android:windowBackground">#FFFFFF</item>
+
+        <!-- 상태 표시줄 색상 -->
+        <item name="android:statusBarColor">#6200EE</item>
+    </style>
+</resources>
